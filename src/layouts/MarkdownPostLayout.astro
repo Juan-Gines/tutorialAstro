@@ -3,7 +3,7 @@ import BaseLaout from '../layouts/BaseLayout.astro'
 const { frontmatter } = Astro.props
 ---
 <BaseLaout pageTitle={frontmatter.title}>
-  <p>{frontmatter.pubDate.slice(0,10)}</p>
+  <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
   <p><em>{frontmatter.description}</em></p>
   <p>Escrito por: {frontmatter.author}</p>
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
